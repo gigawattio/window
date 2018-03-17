@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestWindow(t *testing.T) {
+func TestRolling(t *testing.T) {
 	testCases := []struct {
 		elements []string
 		n        int
@@ -76,9 +76,9 @@ func TestWindow(t *testing.T) {
 	}
 
 	for i, testCase := range testCases {
-		actual := Window(testCase.elements, testCase.n)
+		actual := Rolling(testCase.elements, testCase.n)
 		if !reflect.DeepEqual(actual, testCase.expected) {
-			t.Errorf("[i=%v] Expected result did not match actual\n\tExpected: %+v\n\t  Actual: %+v", i, testCase.expected, actual)
+			t.Errorf("[i=%v] Actual rolling window result did not match expected value\n\tExpected: %+v\n\t  Actual: %+v", i, testCase.expected, actual)
 		}
 	}
 }

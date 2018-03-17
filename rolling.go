@@ -1,7 +1,7 @@
 package window
 
-// Window enables iteration through a rolling window size of string tokens.
-func Window(elements []string, n int) [][]string {
+// Rolling generates a rolling window of size N for a sequence of string tokens.
+func Rolling(elements []string, n int) [][]string {
 	if len(elements) == 0 || len(elements) < n || n <= 0 {
 		return nil
 	}

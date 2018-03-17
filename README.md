@@ -6,7 +6,7 @@
 
 ### About
 
-Window is a golang package for iterating through a rolling window size of string token tuples.
+Window is a golang package for generating a rolling window of size N for a sequence of string tokens.
 
 Created by [Jay Taylor](https://jaytaylor.com/) and used by [Gigawatt](https://gigawatt.io/).
 
